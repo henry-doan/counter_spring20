@@ -39,8 +39,8 @@ class App extends Component {
         {/* <p>{this.state.currentNum}</p>
         <button onClick={this.inc}>+</button>
         <button onClick={this.dec}>-</button> */}
-        <Counter color='green' />
-        <Counter color='orange' />
+        <Counter color='green' title='mine' />
+        <Counter color='orange' title='yours' />
         <Counter color='red' />
         <Counter color='pink' />
       </div>

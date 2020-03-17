@@ -12,10 +12,14 @@ class Counter extends Component {
   }
 
   render() {
+    const { color, title } = this.props
+    // const color = this.props.color
+    // const title = this.props.title
+    const { currentNum } = this.state
     return (
-      <div style={{ backgroundColor: this.props.color }}>
-        <p>{ this.props.color }</p>
-        <p>{ this.state.currentNum }</p>
+      <div style={{ backgroundColor: color }}>
+        <p>{ title }</p>
+        <p>{ currentNum }</p>
         <button onClick={this.inc}>+</button>
         <button onClick={this.dec}>-</button>
         <hr />
