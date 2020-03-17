@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Counter from './components/Counter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  // old syntax
+  // constructor(props) {
+  //   super(props)
+  //   this.state = { currentNum: 0 }
+  //   this.inc = this.inc.bind(this)
+  //   this.dec = this.dec.bind(this)
+  // }
+  // state = { currentNum: 0 }
+
+  // inc() {
+  //   this.setState({ currentNum: this.state.currentNum + 1 })
+  // }
+
+  // dec() {
+  //   this.setState({ currentNum: this.state.currentNum - 1 })
+  // }
+
+  // inc = () => {
+  //   this.setState({ currentNum: this.state.currentNum + 1 })
+
+  //   // this.setState( (state) => {
+  //   //   return { currentNum: state.currentNum + 1 }
+  //   // })
+  // }
+
+  // dec = () => {
+  //   this.setState({ currentNum: this.state.currentNum - 1 })
+  // }
+
+
+  render() {
+    return(
+      <div>
+        <h1>My counter App</h1>
+        {/* <p>{this.state.currentNum}</p>
+        <button onClick={this.inc}>+</button>
+        <button onClick={this.dec}>-</button> */}
+        <Counter color='green' />
+        <Counter color='orange' />
+        <Counter color='red' />
+        <Counter color='pink' />
+      </div>
+    )
+  }
 }
 
+// React.getelement.createelement(<h1>My counter App</h1>)React.getelement.createelement(<p>we will put our counter here</p>)
+
+// React.getelement.createelement(<div>
+//   <h1>My counter App</h1>
+//   <p>we will put our counter here</p>
+// </div>)
 export default App;
